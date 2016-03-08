@@ -1,0 +1,237 @@
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+  .container-fixed();
+
+  @media (min-width: @screen-sm-min) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md-min) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+}
+
+.comments-link{
+  display: none!important;
+}
+
+.entry-meta{
+  display: none!important;
+}
+
+.entry-title{
+  display: none;
+}
+
+.entry-content{
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.more-link{
+  border: 2px solid #1C8E14;
+  border-radius: 3px;
+  padding: 7px;
+  color: #1C8E14;
+  margin-top: 15px!;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  
+  transition:.5s;
+}
+
+.more-link:hover{
+  border: 2px solid #1C8E14;
+  border-radius: 3px;
+  padding: 7px;
+  background-color: #1C8E14;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.postyPost{
+  
+  margin-bottom: 45px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+}
+
+.postyPost a{
+  color: #1C8E14;
+}
+
+.entry-footer{
+  
+
+}
+
+.blogThumb{
+  border-radius: 3px!important;
+  text-align: center;
+  margin-top: -25px;
+  margin-left: -25px;
+  margin-right: -25px;
+}
+.blogThumb img {
+    position:relative;
+    width: 100%;
+    height: auto!important;
+}
+
+.page-header{
+  display: none;
+}
+
+.category-blog{
+  margin-top: 60px!important;
+}
+
+.no-marg{
+  margin-right: 0px!important;
+  margin-left: 0px!important;
+}
+
+
+.bg-white{
+  background-color: #fff;
+  width: 100vw;
+  text-align: center;  
+  padding-top: 50px;
+  padding-bottom: 50px;
+  max-width: 100%;
+}
+
+.navbar-header{
+  max-width: 100%!important;
+}
+
+.bg-white img{
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.bg-grey{
+  background-color: #E5E5E5;
+  width: 100vw;
+  text-align: center;  
+  padding-top: 50px;
+  padding-bottom: 50px;
+  max-width: 100%;
+}
+
+.bg-grey img{
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.bg-dark-green{
+  background-color: #1C8E14;
+  width: 100vw;
+  text-align: center;  
+  color: #fff;
+}
+
+.bg-dark-green img{
+  margin: 0 auto;
+}
+
+
+.bigfoot{
+  .container-fixed();
+  width: @container-sm;
+}
+
+.center-text{
+  text-align: center;
+}
+
+.bg-orange64{
+  background-color: #FF7800;
+}
+
+.bg-yellow{
+  background-color: #FFE400;
+}
+
+.underline{
+  width: 20%;
+  height: 2px;
+  color: #000;
+  background-color: #000;
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+  .container-fixed();
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+  .make-row();
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+.make-grid-columns();
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+.make-grid(xs);
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: @screen-sm-min) {
+  .make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: @screen-md-min) {
+  .make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: @screen-lg-min) {
+  .make-grid(lg);
+}
